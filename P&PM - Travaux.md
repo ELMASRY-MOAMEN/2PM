@@ -23,7 +23,7 @@ Si l'agent a besoin de comprendre les décisions et changements passés avant d'
 | Champ | Valeur |
 |---|---|
 | Priorité actuelle | Ingérer la prochaine source listée dans le registre `Meta` |
-| Dossier ou fichier cible | `Meta/module 1/Deploiement informatique/Formation AMOA_Déploiement informatique_v1.1 (3).pdf` |
+| Dossier ou fichier cible | `Meta/module 1/Deploiement informatique/TimeLine-Upgrade_GO LIVE projection go live_V4.xlsx` |
 | Objectif immédiat | Lire [[P&PM - Skill ingestion documentaire]], analyser la prochaine source du registre et présenter les notes envisagées avant création |
 | Critère de fin | La prochaine source est ingérée, les notes utiles sont créées ou modifiées après validation, et la ligne correspondante du registre est mise à jour |
 | Prochaine étape après finition | Continuer avec la ligne suivante `A faire` dans le registre d'ingestion |
@@ -50,7 +50,7 @@ Règle de complétude : une source ne peut passer à `Termine` que si toutes les
 | ID | Statut | Priorité | Source | Type | Domaine cible pressenti | Lecture complète | Extraction unités | Recherche anti-doublon | Création ou modification | Linkage Obsidian | Validation humaine | Pilotage mis à jour | Notes créées ou modifiées | Commentaire |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | SRC-001 | Termine | Moyenne | `Meta/module 1/Deploiement informatique/Formation AMOA - Déploiement Informatique - Agenda.pdf` | pdf | Project Management/06 - Deploiement et conduite du changement | [x] | [x] | [x] | [x] | [x] | Validée par l'utilisateur avant création | [x] | [[Déploiement informatique]], [[Réaliser une étude d'impact de déploiement]], [[Réaliser une analyse de risque de déploiement]], [[Définir une stratégie de déploiement]] | Première ingestion complète. Source conservée comme preuve et traçabilité après extraction des fiches actionnables. |
-| SRC-002 | A faire | Moyenne | `Meta/module 1/Deploiement informatique/Formation AMOA_Déploiement informatique_v1.1 (3).pdf` | pdf | Project Management | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |  |  |
+| SRC-002 | Termine | Moyenne | `Meta/module 1/Deploiement informatique/Formation AMOA_Déploiement informatique_v1.1 (3).pdf` | pdf | Project Management/06 - Deploiement et conduite du changement | [x] | [x] | [x] | [x] | [x] | Validée par l'utilisateur avant création/modification | [x] | [[Déploiement informatique]], [[Définir une stratégie de déploiement]], [[Migration des données dans un déploiement]], [[DevOps et déploiement informatique]] | Support complet utilisé pour enrichir les notes existantes et créer deux notes distinctes sur migration des données et DevOps. |
 | SRC-003 | A faire | Moyenne | `Meta/module 1/Deploiement informatique/TimeLine-Upgrade_GO LIVE projection go live_V4.xlsx` | xlsx | Project Management | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |  |  |
 | SRC-004 | A faire | Haute | `Meta/module 1/Recette métierr/AMOA_Les tests métier_V1.04 (3).pdf` | pdf | Project Management | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |  |  |
 | SRC-005 | A faire | Haute | `Meta/module 1/Recette métierr/M2-Tests-EXO3-Defects-Énoncé-V1.3 (1).pdf` | pdf | Project Management | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |  |  |
@@ -185,6 +185,7 @@ Règle de complétude : une source ne peut passer à `Termine` que si toutes les
 | 2026-05-25 | Création d'une première arborescence de dossiers dans `Product Management`, `Project Management` et `Transverses`, à partir d'une lecture globale du dossier `Meta`. |
 | 2026-05-25 | Création de [[P&PM - Skill ingestion documentaire]] et ajout des 126 fichiers sources de `Meta` au registre d'ingestion. |
 | 2026-05-25 | Ingestion de `SRC-001` et création de 4 notes sur le déploiement informatique. |
+| 2026-05-25 | Ingestion de `SRC-002`, enrichissement des notes de déploiement et création de 2 notes sur migration des données et DevOps. |
 
 ## Décisions à prendre
 

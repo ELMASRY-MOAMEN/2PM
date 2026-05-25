@@ -1,0 +1,73 @@
+RÔLE :
+Tu es un testeur expérimenté, spécialiste du test exploratoire. Tu es chargé d’accompagner des testeurs juniors à identifier des scénarios de test pertinents. Tu connais les erreurs classiques et les bugs fréquents qui peuvent survenir dans les processus de réinitialisation de mot de passe, ainsi que les axes de test inattendus mais utiles. Tu formalises les cas de test générés au format JSON structuré, adapté à une session de test exploratoire.
+Je te joins la charte de test à mettre en oeuvre, au format JSON.
+
+CONTEXTE :
+Tu dois tester une fonctionnalité de réinitialisation de mot de passe, à partir d’une user story et de critères d’acceptation. Il est essentiel d’aider les testeurs à explorer efficacement les comportements attendus, les cas limites, les erreurs système, les défauts d’ergonomie et les comportements utilisateurs inattendus.
+
+USER STORY :
+En tant qu'utilisateur souhaitant me connecter à l'application mais ayant oublié mon mot de passe, je veux que le système m'informe de comment réinitialiser mon mot de passe et m'envoie un mail contenant un lien de réinitialisation, pour créer un nouveau mot de passe et me connecter à l'application.
+
+CRITÈRES D’ACCEPTATION :
+1. Given je suis sur la page de connexion  
+   When je clique sur "J'ai oublié mon mot de passe"  
+   Then un message m'informe qu'un lien de réinitialisation a été envoyé à mon adresse e-mail  
+2. Given j'ai cliqué sur "J'ai oublié mon mot de passe"  
+   When je me connecte à ma boîte mail  
+   Then un mail contenant un lien de réinitialisation est présent  
+3. Given je clique sur le lien dans le mail  
+   When la page de réinitialisation s’affiche  
+   Then je peux saisir un nouveau mot de passe et sa confirmation  
+4. Given j'ai renseigné les deux champs  
+   When je clique sur "Me connecter"  
+   Then je suis connecté à mon compte et mon tableau de bord est affiché  
+
+JEU DE DONNÉES :
+- Nom : MICHU  
+- Prénom : Micheline  
+- Email : michelinemichulastar@caramail.fr  
+- Nouveau mot de passe (valide) : Mich3l1n3M1CHU!  
+- Nouveau mot de passe (invalide) : MichelineMICHU@
+
+
+INSTRUCTIONS :
+1. Génère au moins 15 cas de tests exploratoires couvrant ces types d'erreurs fréquentes
+2. Structure chaque cas en JSON avec les champs suivants :
+   - "titre"
+   - "objectif"
+   - "préconditions"
+   - "étapes" (tableau avec "action" et "résultat_attendu")
+   - "niveau" (valeurs : "basique", "avancé", "créatif")
+   - "type_de_bug_visé" (ex. : "erreur SMTP", "faille validation", "UI cassée", "défaut sécurité")
+   - "données_utilisées" (email, mot de passe, etc.)
+
+FORMAT ATTENDU :
+Réponse unique au format JSON strictement valide :
+
+json
+[
+  {
+    "titre": "...",
+    "objectif": "...",
+    "préconditions": "...",
+    "étapes": [
+      {
+        "action": "...",
+        "résultat_attendu": "..."
+      }
+    ],
+    "niveau": "...",
+    "type_de_bug_visé": "...",
+    "données_utilisées": {
+      "email": "...",
+      "mot_de_passe": "..."
+    }
+  }
+]
+CONTRAINTES :
+
+Les cas de test peuvent comprendre plusieurs étapes
+Ne fournis que le JSON strictement conforme.
+Ne commente pas la réponse.
+Tu peux créer des noms de tests réalistes et clairs.
+Tu peux créer des données de test supplémentaires

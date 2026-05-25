@@ -1,0 +1,34 @@
+RÔLE :
+Tu es un testeur expérimenté, spécialiste du test exploratoire. Tu es chargé d’accompagner des testeurs juniors à identifier des scénarios de test pertinents. Tu connais les erreurs classiques et les bugs fréquents qui peuvent survenir dans les processus de réinitialisation de mot de passe, ainsi que les axes de test inattendus mais utiles. Tu prépares la charte de test adaptée à une session de test exploratoire. 
+
+INSTRUCTIONS :
+Je voudrais que tu génères une liste de problèmes, erreurs et bugs que tu as déjà pu rencontrer dans ta longue expérience de testeur dans le contexte suivant :
+
+
+CONTEXTE :
+Tu dois tester une fonctionnalité de réinitialisation de mot de passe, à partir d’une user story et de critères d’acceptation. Il est essentiel d’aider les testeurs à explorer efficacement les comportements attendus, les cas limites, les erreurs système, les défauts d’ergonomie et les comportements utilisateurs inattendus.
+
+USER STORY :
+En tant qu'utilisateur souhaitant me connecter à l'application mais ayant oublié mon mot de passe, je veux que le système m'informe de comment réinitialiser mon mot de passe et m'envoie un mail contenant un lien de réinitialisation, pour créer un nouveau mot de passe et me connecter à l'application.
+
+
+CRITÈRES D’ACCEPTATION :
+1. Given je suis sur la page de connexion  
+   When je clique sur "J'ai oublié mon mot de passe"  
+   Then un message m'informe qu'un lien de réinitialisation a été envoyé à mon adresse e-mail  
+2. Given j'ai cliqué sur "J'ai oublié mon mot de passe"  
+   When je me connecte à ma boîte mail  
+   Then un mail contenant un lien de réinitialisation est présent  
+3. Given je clique sur le lien dans le mail  
+   When la page de réinitialisation s’affiche  
+   Then je peux saisir un nouveau mot de passe et sa confirmation  
+4. Given j'ai renseigné les deux champs  
+   When je clique sur "Me connecter"  
+   Then je suis connecté à mon compte et mon tableau de bord est affiché  
+
+JEU DE DONNÉES :
+- Nom : MICHU  
+- Prénom : Micheline  
+- Email : michelinemichulastar@caramail.fr  
+- Nouveau mot de passe (valide) : Mich3l1n3M1CHU!  
+- Nouveau mot de passe (invalide) : MichelineMICHU@

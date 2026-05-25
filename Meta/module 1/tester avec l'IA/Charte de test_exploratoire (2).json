@@ -1,0 +1,78 @@
+{
+  "charte_test_exploratoire": {
+    "objectif_general": "Explorer les risques, bugs et défauts potentiels liés au processus de réinitialisation de mot de passe depuis la page de connexion jusqu'à la reconnexion avec un nouveau mot de passe.",
+    "user_story": "En tant qu'utilisateur ayant oublié mon mot de passe, je souhaite recevoir un lien par mail pour réinitialiser ce mot de passe et accéder à mon compte.",
+    "critères_acceptation": [
+      "Un message confirme l’envoi du lien de réinitialisation",
+      "Un mail contenant le lien est bien reçu",
+      "Le lien mène à un formulaire de nouveau mot de passe",
+      "L’utilisateur peut se connecter avec le nouveau mot de passe"
+    ],
+    "types_de_risques_explorés": {
+      "techniques": [
+        "Lien expiré immédiatement ou non généré",
+        "Backend non réactif ou crash serveur",
+        "Lien réutilisable après première utilisation",
+        "Mot de passe inchangé malgré validation"
+      ],
+      "fonctionnels": [
+        "Pas de vérification entre mot de passe et confirmation",
+        "Mot de passe identique à l’ancien accepté",
+        "Email invalide accepté dans le formulaire"
+      ],
+      "emails": [
+        "Mail classé en spam",
+        "Lien invalide ou incorrect dans l’email",
+        "Aucun mail reçu (problème SMTP ou filtrage)",
+        "Email mal formaté (HTML/CSS ou texte brut)"
+      ],
+      "sécurité": [
+        "Lien non sécurisé (HTTP)",
+        "Jeton de réinitialisation prédictible",
+        "Lien actif trop longtemps",
+        "Absence de CAPTCHA ou de vérification supplémentaire"
+      ],
+      "ergonomie_et_accessibilité": [
+        "Absence de message de retour clair",
+        "Pas d’aide sur la complexité du mot de passe",
+        "Texte d’erreur non localisé",
+        "Problèmes de navigation clavier ou lecteur d’écran"
+      ],
+      "comportements_inattendus_utilisateurs": [
+        "Plusieurs demandes successives de lien",
+        "Réutilisation du lien après déconnexion",
+        "Réinitialisation abandonnée puis reprise",
+        "Utilisation du lien depuis un autre appareil"
+      ],
+      "résilience_et_réseau": [
+        "Perte de réseau durant la soumission",
+        "Lien copié/collé dans un navigateur obsolète",
+        "Test en navigation privée",
+        "Interruption pendant la saisie du nouveau mot de passe"
+      ]
+    },
+    "jeu_de_données_recommandé": {
+      "utilisateur_valide": {
+        "nom": "MICHU",
+        "prénom": "Micheline",
+        "email": "michelinemichulastar@caramail.fr"
+      },
+      "mot_de_passe_valide": "Mich3l1n3M1CHU!",
+      "mot_de_passe_invalide": "MichelineMICHU@"
+    },
+    "recommandations_aux_testeurs": [
+      "Documenter les chemins explorés et les résultats",
+      "Capturer les messages d’erreur exacts",
+      "Tester sur différents navigateurs et supports",
+      "Faire varier les combinaisons de mots de passe valides/invalides",
+      "Utiliser les données réelles mais aussi des entrées malicieuses"
+    ],
+    "durée_suggérée": "45 à 90 minutes",
+    "outils_suggérés": [
+      "Console navigateur (réseau, erreurs JS)",
+      "Outil de test des emails (Mailtrap, Mailhog)",
+      "Bloc-notes ou outil de prise de notes exploratoires (par ex. TestBuddy)"
+    ]
+  }
+}
+
